@@ -89,10 +89,10 @@
 
 // SOLUTION
 
+// just function
+
 // function isEven(a) {
-//   if (a < 0) {
-//     return false;
-//   } else if (a % 2 === 0) {
+//   if (a % 2 === 0) {
 //     return true;
 //   } else {
 //     return false;
@@ -102,6 +102,24 @@
 // console.log(isEven(50));
 // console.log(isEven(75));
 // console.log(isEven(-1));
+
+// recursive function
+
+// function isEvenR(a) {
+//   if (a === 1) {
+//     return false;
+//   } else if (a === 0) {
+//     return true;
+//   } else if (a > 0) {
+//     return isEvenR(a - 2);
+//   } else {
+//     return isEvenR(a + 2);
+//   }
+// }
+
+// console.log(isEvenR(50));
+// console.log(isEvenR(75));
+// console.log(isEvenR(-1));
 
 // <-----     TASK 6     ----->
 
@@ -124,13 +142,37 @@
 //   return a.length;
 // }
 
-// console.log(countBs("Hello word"));
+// console.log(countBs("Bye word B"));
 
 // function countChar(a) {
 //   return a.charAt(3);
 // }
 
 // console.log(countChar("Hello word"));
+
+// let str = "Bye wordB B";
+// let counter = 0;
+
+// for (let i = 0; i < str.length; i += 1) {
+//   if (str.charAt(i) === "B") {
+//     counter += 1;
+//   }
+// }
+// console.log(counter);
+
+// right solution
+
+// function countChar(str, count) {
+//   let counter = 0;
+//   for (let i = 0; i < str.length; i += 1) {
+//     if (str.toLowerCase().charAt(i) === count) {
+//       counter += 1;
+//     }
+//   }
+//   return counter;
+// }
+
+// console.log(countChar("BByeb AAAAAword B", "b"));
 
 // <-----     TASK 7     ----->
 
