@@ -187,3 +187,58 @@
 // SOLUTION
 
 // <-----     TASK 10     ----->
+
+// <--------------------------------      training      -------------------------------->
+
+// function calculateTotal(number) { // number=2
+//   let total = 0;
+//   for (let i = 0; i <= number; i += 1) { // 0 1 2
+//     // 0 1 2
+
+//     total += i; // total=1; total=2
+//     //return (total += i + number); // 0 + 3 = 3
+//     // 1 + 3 = 4. // 2 + 3
+//   }
+//   return total;
+// }
+
+// console.log(calculateTotal(3));
+// console.log(calculateTotal(1));
+// console.log(calculateTotal(3));
+// console.log(calculateTotal(7));
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   for (let i = 0; i < order.length; i += 1) {
+//     console.log(order[i]);
+//     total += order[i]
+//   }
+
+//   return total;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// <--------------------------------      training      -------------------------------->
+
+// Напиши функцию findLongestWord(string) которая принимает произвольную строку состоящую
+// только из слов разделённых пробелом (параметр string) и возвращает самое длинное слово в этой строке.
+
+// function findLongestWord(string) {
+//   const newStr = string.split(" ");
+//   let longestWord = newStr[0];
+
+//   for (const word of newStr) {
+//     if (word.length > longestWord.length) {
+//       longestWord = word;
+//     }
+//   }
+
+//   return longestWord;
+// }
+
+// console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+// console.log(findLongestWord("Google do a roll"));
+// console.log(findLongestWord("May the force be with you"));
+
+// <--------------------------------      training      -------------------------------->
