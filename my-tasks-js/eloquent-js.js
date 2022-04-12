@@ -242,3 +242,104 @@
 // console.log(findLongestWord("May the force be with you"));
 
 // <--------------------------------      training      -------------------------------->
+
+// function filterArray(numbers, value) {
+//   // Change code below this line
+//   let newArray = [];
+
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     // console.log(numbers[i]);
+//     // newArray.push(numbers);
+
+//     if (numbers[i] > value) {
+//       newArray.push(numbers[i]);
+//     }
+//   }
+//   return newArray;
+//   // Change code above this line
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+
+// <--------------------------------      training      -------------------------------->
+
+/* Общими элементами массивов называют те элементы, которые присутствуют во всех массивах.
+Например, в двух массивах [1, 3, 5] и [0, 8, 5, 3] общими будут числа 3 и 5, т.к. они 
+присутствуют в обоих исходных массивах. А числа 0, 1 и 8 присутствуют только в одном из массивов.
+Напиши функцию getCommonElements(array1, array2) которая получает два массива произвольной 
+длины в параметры array1 и array2, и возвращает новый массив, состоящий из тех элементов, 
+которые присутствуют в обоих исходных массивах. */
+
+// function getCommonElements(array1, array2) {
+//   let newArray = [];
+
+//   //   for (let element of array1) {
+//   //     // element == array1[i]
+//   //     for (let element2 of array2) {
+//   //       if (element === element2) {
+//   //         newArray.push(element);
+//   //       }
+//   //     }
+//   //   }
+
+//   for (let element of array1) {
+//     if (array2.includes(element)) {
+//       newArray.push(element);
+//     }
+//   }
+
+//   return newArray;
+// }
+
+// console.log(getCommonElements([1, 2, 3, 5], [2, 3, 4]));
+
+// <--------------------------------      training      -------------------------------->
+
+/* Напиши функцию getEvenNumbers(start, end) которая возвращает массив 
+всех чётных чисел от start до end. Чётным считается число которое делится на 2 без остатка 
+(10 % 2 === 0). */
+
+// function getEvenNumbers(start, end) {
+
+//   let newArray = [];
+
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       newArray.push(i);
+//     }
+//   }
+
+//   return newArray;
+// }
+
+// console.log(getEvenNumbers(2, 5));
+
+// <--------------------------------      training      -------------------------------->
+
+/* Напиши функцию includes(array, value), которая делает тоже самое, 
+что и метод массива массив.includes(значение) - проверяет, есть ли 
+в массиве array значение value, возвращая true если есть и false в противном случае.
+При выполнении этой задачи в теле функции includes() нельзя использовать 
+метод массив.includes(значение). */
+
+// function includes(array, value) {
+
+//   for (const element of array) {
+//     if (element === value) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// console.log(includes([1, 2, 3, 4, 5], 3));
+// console.log(includes([1, 2, 3, 4, 5], 17));
+
+// <--------------------------------      training      -------------------------------->
+
+// Напиши функцию filterArray(numbers, value), которая принимает массив чисел
+// (параметр numbers) и возвращает новый массив В ОБРАТНОМ ПОРЯДКЕ, в котором будут только те ЧЕТНЫЕ элементы массива
+// numbers, которые которые делятся на 2 чем значение параметра value (число).
+// filterArray([1, 2, 3, 4, 5], 1) -> [4, 2]
+// Подсказка: Цикл может перебирать не с первого элемента, а с последнего
