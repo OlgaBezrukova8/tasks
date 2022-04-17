@@ -343,3 +343,303 @@
 // numbers, которые которые делятся на 2 чем значение параметра value (число).
 // filterArray([1, 2, 3, 4, 5], 1) -> [4, 2]
 // Подсказка: Цикл может перебирать не с первого элемента, а с последнего
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4.7,
+//   price: 5000,
+//   tags: ["premium", "promoted", "top", "trusted"],
+//   owner: {
+//     name: "Henry Sibola",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+
+// // Change code below this line
+// apartment.area = 60;
+// apartment.rooms = 3;
+
+// //console.log((apartment.location = {}));
+// console.log((apartment.location.country = "Jamaica"));
+// console.log((apartment.location.city = "Kingston"));
+// console.log((apartment.area = 60));
+// console.log((apartment.rooms = 3));
+// console.log(apartment);
+// // const location = {
+// // country: "Jamaica",
+// // city: "Kingston",
+// // }
+
+// const array = [
+//   1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1,
+//   2, 3, 4, 5, 6,
+// ];
+// let count = 0;
+
+// for (let i = 0; i < array.length; i += 1) {
+//   if (i % 10 === 0 && i !== 0) {
+//     count += 1;
+//     let y = 0;
+//   }
+// }
+
+// console.log(count);
+
+// function countProps(object) {
+//   // Change code below this line
+//   let propCount = 0;
+
+//   const keysArray = Object.keys(object);
+//   for (let key of keysArray) {
+//     propCount += 1;
+//   }
+
+//   return propCount;
+//   // Change code above this line
+// }
+
+// const animal = {
+//   name: "JSON",
+//   age: 40,
+// };
+
+// console.log(countProps(animal));
+// console.log(countProps(animal));
+// console.log(countProps(animal));
+// console.log(countProps(animal));
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+// ];
+
+// for (const book of books) {
+//   // Объект книги
+//   console.log(book);
+//   // Название
+//   console.log(book.title);
+//   // Автор
+//   console.log(book.author);
+//   // Рейтинг
+//   console.log(book.rating);
+// }
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+//   for (let product of products) {
+//     if (productName === product.name) {
+//       return product.price;
+//     }
+//   }
+//   return null;
+//   // Change code above this line
+// }
+
+// // console.log(getProductPrice("Radar"));
+// console.log(getProductPrice("Grip"));
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   const array = [];
+
+//   for (let product of products) {
+//     for (let key in product) {
+//       if (propName === key) {
+//         array.push(product[key]);
+//       }
+//     }
+//   }
+
+//   return array;
+//   // Change code above this line
+// }
+
+// console.log(getAllPropValues("name"));
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+
+// for (const color of colors) {
+//   const { hex, rgb } = color;
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+// }
+
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+
+// const {
+//   today: {
+//     high: highToday,
+//     low: lowToday,
+//     icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+//   },
+//   tomorrow: {
+//     high: highTomorrow,
+//     low: lowTomorrow,
+//     tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+//   },
+// } = forecast;
+
+// console.log(lowToday);
+// console.log(todayIcon);
+
+/* Напиши функцию makeTask(data) которая принимает один параметр data - объект со следующими свойствами.
+
+text - текст задачи.
+category - категория задачи.
+priority - приоритет задачи.
+
+Функция должна составить и вернуть новый объект задачи, не изменяя напрямую параметр data. 
+В новом объекте должно быть свойство completed, значение которого хранится в одноимённой 
+локальной переменной.
+
+В параметре data гарантированно будет только свойство text, а остальные два, category и priority, 
+могут отсутствовать. Тогда, в новом объекте задачи, в свойствах category и priority должны быть 
+значения по умолчанию, хранящиеся в одноимённых локальных переменных. */
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category2 = "General";
+//   const priority2 = "Normal";
+//   // Change code below this line
+//   const { text, category = category2, priority = priority2 } = data;
+
+//   const object = { text, category, priority, completed };
+//   return object;
+//   // Change code above this line
+// }
+
+// console.log(makeTask({ category: "Finance", text: "Take interest" }));
+// console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
+
+/* Функция findMatches() принимает произвольное количество аргументов. 
+Первым аргументом всегда будет массив чисел, а остальные аргументы будут просто числами.
+
+Дополни код функции так, чтобы она возвращала новый массив matches, в котором будут только те аргументы,
+начиная со второго, которые есть в массиве первого аргумента.
+
+Например, findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) должна вернуть массив [1, 2], потому что только 
+они есть в массиве первого аргумента. */
+
+// function findMatches(arrayOfNumbers, ...args) {
+//   const matches = [];
+
+//   for (let oneArgument of args) {
+//     for (let oneNumber of arrayOfNumbers) {
+//       if (oneArgument === oneNumber) {
+//         matches.push(oneArgument);
+//       }
+//     }
+//   }
+
+//   return matches;
+// }
+
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+
+// Find middle character of the word.
+// User is going to input a word. Your task is to find the middle character of this word.
+// If the word’s length is odd - return the middle character.If word’s length
+// is even - return the middle 2 characters.
+// You should validate for cancelled input, empty value and for value with spaces only,
+// in that case show message: “Invalid value”.
+// For user input use “prompt” function. For displaying result use “alert” function.
+
+// Examples:
+// 	For user input “test” should return “es”
+// 	For user input “character” should return “a”
+// 	For user input “B” should return “B”
+// 	For user input “” should return “Invalid value”
+//  For user input “       “ should return “Invalid value”
+
+/* 
+1. проверить длину слова на четное / не четное (Написать цикл for) - остаток от деления
+2. найти средину - длину слова делить на 2
+3. если четное - показать средние 2 буквы 
+4. 
+ */
+
+// function findCharacter() {
+//   const word = prompt("Enter word");
+//   if (word === "" || word.trim() === "" || !Number.isNaN(Number(word))) {
+//     alert("Invalid value");
+//     return;
+//   }
+
+//   // let sumOfMiddleCharacter = "";
+//   // const middle = word.length / 2;
+//   // if (word.length % 2 === 0) {
+//   //   // четные
+//   //   sumOfMiddleCharacter = word[middle - 1] + word[middle];
+//   // } else {
+//   //   // нечетные
+//   //   sumOfMiddleCharacter = word[Math.floor(middle)];
+//   // }
+
+//   const middle = word.length / 2;
+
+//   const midChar =
+//     word.length % 2 === 0
+//       ? word[middle - 1] + word[middle]
+//       : word[Math.floor(middle)];
+//   alert(midChar);
+// }
+// while (true) {
+//   findCharacter();
+// }
+// console.log(findCharacter("test")); // es
+// console.log(findCharacter("tester")); // st
+// console.log(findCharacter("character")); // a
+// console.log(findCharacter("B")); // B
+// console.log(findCharacter("")); // error
+// console.log(findCharacter("      ")); // error
