@@ -643,3 +643,1172 @@ priority - приоритет задачи.
 // console.log(findCharacter("B")); // B
 // console.log(findCharacter("")); // error
 // console.log(findCharacter("      ")); // error
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     const elementOfArray = this.books.indexOf(oldName);
+//     this.books.splice(elementOfArray, 1, newName);
+//     // Change code above this line
+//   },
+// };
+
+// console.log(bookShelf.updateBook("Haze", "Dungeon chronicles")); // ["The last kingdom", "Dungeon chronicles", "The guardian of dreams"]
+// console.log(bookShelf.updateBook("The last kingdom", "Dune")); // ["Dune", "Haze", "The guardian of dreams"]
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     let add = 0;
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       if (newPotion.name === this.potions[i].name) {
+//         add += 1;
+//       }
+//     }
+//     if (add === 0) {
+//       this.potions.push(newPotion);
+//       return;
+//     }
+//     return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//   },
+//   removePotion(potionName) {
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       if (potionName === this.potions[i].name) {
+//         this.potions.splice(i, 1);
+//       }
+//     }
+//   },
+
+//   updatePotionName(oldName, newName) {
+//     for (let i = 1; i < this.potions.length; i += 1) {
+//       if (oldName === this.potions[i].name) {
+//         this.potions[i].name = newName;
+//       }
+//     }
+
+//     // const potionIndex = this.potions.indexOf(oldName);
+
+//     // if (potionIndex === -1) {
+//     //   return `Potion ${oldName} is not in inventory!`;
+//     // }
+
+//     // this.potions.splice(potionIndex, 1, newName);
+//   },
+// };
+
+// console.log(atTheOldToad.getPotions());
+//console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
+// console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
+//console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
+// atTheOldToad.removePotion("Dragon breath");
+// atTheOldToad.removePotion("Speed potion");
+// console.log(atTheOldToad.getPotions());
+// atTheOldToad.updatePotionName("Dragon breath", "Polymorth");
+// atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion");
+
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+
+// Write the code which verify user rights.
+// Step 1. Check login
+// 	Ask user for a login // use prompt()
+// 	If the input is an empty line or Esc – show “Canceled.” // for showing - use alert()
+// 	If the input length less than 4 symbols - show “I don't know any users having name length less than 4 symbols”.
+// 	If it’s another string – then show “I don’t know you”.
+// 	If the visitor enters "User" or "Admin", then prompt for a password.
+// Step 2. Check password:
+// 	For an empty string or cancelled input, show “Canceled.”
+// 	For login “User” correct password is “UserPass”, for “Admin” correct password is  “RootPass”.
+// In other case, show “Wrong password”.
+// Step 3. Greets the user appropriately:
+// 	If the current time in hours is more then 5.00 and less then 20: // current hours – new Date().getHours()
+// 	For “User” show “Good day, dear User!”
+// 	For “Admin” show “Good day, dear Admin!”
+// 	In other way:
+// 	For “User” show “Good evening, dear User!”
+// 	For “Admin” show “Good evening, dear Admin!
+
+// const userInput = prompt("Enter login");
+// // const userInputLower = userInput.toLowerCase();
+// const userName = "User";
+// const adminName = "Admin";
+// let userPassword = "";
+// const rightUserPassword = "UserPass";
+// const rightAdminPassword = "RootPass";
+// const currentHour = new Date().getHours(); // 14
+
+// // TODO: switch login to ToLowerCase
+
+// if (userInput === "" || userInput === null) {
+//   alert("Canceled");
+// } else if (userInput.length < 4) {
+//   alert("I don't know any users having name length less than 4 symbols");
+// } else if (userInput === userName || userInput === adminName) {
+//   userPassword = prompt("Enter password");
+// } else {
+//   alert("I don’t know you");
+// }
+
+// if (userPassword === "" || userPassword === null) {
+//   alert("Canceled");
+// } else if (userInput === userName) {
+//   if (userPassword === rightUserPassword) {
+//     if (currentHour > 5 && currentHour < 20) {
+//       alert("Good day, dear User!");
+//     } else {
+//       alert("Good evening, dear User!");
+//     }
+//   } else {
+//     alert("Wrong password");
+//   }
+// } else if (userInput === adminName) {
+//   if (userPassword === rightAdminPassword) {
+//     if (currentHour > 5 && currentHour < 20) {
+//       alert("Good day, dear Admin!");
+//     } else {
+//       alert("Good evening, dear Admin!");
+//     }
+//   } else {
+//     alert("Wrong password");
+//   }
+// }
+
+// console.log(userPassword);
+// console.log(currentHour);
+
+// function login() {
+//   const input = prompt("Enter login").toLowerCase();
+
+//   let pass = "";
+//   const userName = "user";
+//   const adminName = "admin";
+
+//   const userPass = "UserPass";
+//   const adminPass = "RootPass";
+
+//   if (input === "" || input === null || input < 4) {
+//     alert("Canceled");
+//     return;
+//   } else if (input === userName || input === adminName) {
+//     pass = prompt("Enter password");
+//   } else {
+//     alert("I don't know");
+//     return;
+//   }
+
+//   if (input === adminName) {
+//     if (pass === adminPass) {
+//       alert("Admin: message");
+//     } else {
+//       alert("Canceled");
+//     }
+//   } else if (input === userName) {
+//     if (pass === userPass) {
+//       alert("User: message");
+//     } else {
+//       alert("Canceled");
+//     }
+//   } else {
+//     alert("I don't know");
+//   }
+
+//   const calcInput = prompt("Enter symbol");
+//   const number = Number(calcInput[0]);
+//   const number2 = Number(calcInput[2]);
+//   const operator = calcInput[1];
+
+//   if (input === userName) {
+//     alert("User doesn't have right to use calculator");
+//   } else if (input === adminName) {
+//     if (operator === "+") {
+//       alert(number + number2);
+//     } else if (operator === "-") {
+//       alert(number - number2);
+//     } else if (operator === "*") {
+//       alert(number * number2);
+//     } else if (operator === "/") {
+//       alert(number / number2);
+//     } else {
+//       return "Not symbol";
+//     }
+//   }
+
+//   if (input === userName) {
+//   } else if (pass === userPass) {
+//     prompt("User: message");
+//   } else if (pass === adminPass) {
+//     prompt("Admin: message");
+//   }
+// }
+
+// login();
+
+// Write a function which creates an array from the given range of number
+// // makeListFromRange([2, 7]) // [2, 3, 4, 5, 6, 7]
+// // makeListFromRange([8, 5]) // [5, 6, 7, 8]
+
+// function makeListFromRange(a, b) {
+//   let array = [];
+
+//   if (a < b) {
+//     for (let i = a; i <= b; i += 1) {
+//       array.push(i);
+//     }
+//   } else {
+//     for (let i = b; i <= a; i += 1) {
+//       array.push(i);
+//     }
+//   }
+
+//   return array;
+// }
+
+// console.log(makeListFromRange(8, 5));
+
+// const array2 = [3, 4, 5, 4, 3];
+// let total = 0;
+
+// for (let i = 0; i < array2.length; i += 1) {
+//   if (array2[i] === 4) {
+//     total += 1;
+//   }
+// }
+
+// console.log(total);
+
+// const users = [
+//   {
+//     id: "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     skills: ["ipsum", "lorem"],
+//     gender: "male",
+//     age: 37,
+//   },
+//   {
+//     id: "7a3cbd18-57a1-4534-8e12-1caad921bda1",
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
+//     gender: "female",
+//     age: 34,
+//   },
+//   {
+//     id: "88beb2f3-e4c2-49f3-a0a0-ecf957a95af3",
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     skills: ["nulla", "anim", "proident", "ipsum", "elit"],
+//     gender: "male",
+//     age: 24,
+//   },
+//   {
+//     id: "249b6175-5c30-44c6-b154-f120923736f5",
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     skills: ["adipisicing", "irure", "velit"],
+//     gender: "female",
+//     age: 21,
+//   },
+//   {
+//     id: "334f8cb3-eb04-45e6-abf4-4935dd439b70",
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     skills: ["ex", "culpa", "nostrud"],
+//     gender: "male",
+//     age: 27,
+//   },
+//   {
+//     id: "150b00fb-dd82-427d-9faf-2879ea87c695",
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     skills: ["non", "amet", "ipsum"],
+//     gender: "male",
+//     age: 38,
+//   },
+//   {
+//     id: "e1bf46ab-7168-491e-925e-f01e21394812",
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     skills: ["lorem", "veniam", "culpa"],
+//     gender: "female",
+//     age: 39,
+//   },
+// ];
+
+// function filterArray(inputUsers) {
+//   let arrayUsers = [];
+
+//   for (let user of inputUsers) {
+//     if (user.eyeColor === "blue") {
+//       arrayUsers.push(user);
+//     }
+//     // console.table(objectUsers);
+//   }
+
+//   return arrayUsers;
+// }
+
+// let usr = {
+//   id: "e1bf46ab-7168-491e-925e-f01e21394812",
+//   name: "Sheree Anthony",
+//   email: "shereeanthony@kog.com",
+//   eyeColor: "brown",
+//   friends: ["Goldie Gentry", "Briana Decker"],
+//   isActive: true,
+//   balance: 2764,
+//   skills: ["lorem", "veniam", "culpa"],
+//   gender: "female",
+//   age: 39,
+// };
+// const array1 = [1, 1, 2, 3, 4, 7];
+// console.log(users.indexOf(usr));
+
+// function removeUser(inputUsers) {
+//   for (let i = 0; i < inputUsers.length; ) {
+//     if (inputUsers[i].balance <= 3000) {
+//       inputUsers.splice(i, 1);
+//     } else {
+//       i += 1;
+//     }
+//   }
+
+//   return inputUsers;
+// }
+
+// removeUser(users);
+// console.table(users);
+
+// function deliverPizza(pizzaName) {
+//   return `Delivering ${pizzaName} pizza.`;
+// }
+
+// function makePizza(pizzaName) {
+//   return `Pizza ${pizzaName} is being prepared, please wait...`;
+// }
+
+// // Chande code below this line
+// function makeMessage(pizzaName, callback) {
+//   callback(pizzaName);
+//   return;
+// }
+
+// console.log(makeMessage("Royal Grand", makePizza));
+
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSuccess, onError) {
+//     let exists = false;
+//     for (let pizza of this.pizzas) {
+//       if (pizza === pizzaName) {
+//         exists = true;
+//         break;
+//       }
+//     }
+
+//     if (exists === false) {
+//       return onError(
+//         `There is no pizza with a name ${pizzaName} in the assortment.`
+//       );
+//     }
+
+//     return onSuccess(pizzaName);
+//   },
+// };
+
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
+// pizzaPalace.order("Smoked", makePizza, onOrderError);
+// pizzaPalace.order("Four meats", makePizza, onOrderError);
+// pizzaPalace.order("Big Mike", makePizza, onOrderError);
+// console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
+
+// Create a function checkSchedule
+// User enters string via prompt
+// if user enters "shop" call callback shop - it return "shop is working"
+// if iser enters "bar" call callback bar - it return "bar is working" / "bar is not working"
+// depending on date parametr (> 8 - work, < 8 - not work)
+// otherwise call callback unknown - it get user enter in parametrs
+// and return "${} not exists"
+
+// const checkSchedule = (input, shopParam, barParam, unknownParam) => {
+//   //let enter = prompt("Enter word");
+//   const shopName = "shop";
+//   const barName = "bar";
+
+//   if (input === shopName) {
+//     return shopParam();
+//   } else if (input === barName) {
+//     return barParam();
+//   }
+
+//   return unknownParam(input);
+// };
+
+// const shop = () => "shop is working";
+
+// const barSchedule = () => {
+//   if (new Date().getHours() > 8) {
+//     return "bar is working";
+//   }
+
+//   return "bar is not working";
+// }
+
+// const unknown = (name) => `${name} not exists`;
+
+// const unknownVersin2 = (name) => `${name} not exists but building`;
+
+// console.log(checkSchedule("shop", shop, barSchedule, unknown));
+// console.log(checkSchedule("bar", shop, barSchedule, unknown));
+// console.log(checkSchedule("market", shop, barSchedule, () => "rfrfr"));
+
+// function cycleFn(element) {
+//   console.log(element);
+// }
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+// Change code below this line
+
+// for (let i = 0; i < orderedItems.length; i += 1) {
+//   totalPrice += orderedItems[i];
+// }
+
+//   orderedItems.forEach(cycleFn);
+
+//    for (let i = 0; i < orderedItems.length; i += 1) {
+//     totalPrice += orderedItems[i];
+//   }
+
+//   // Change code above this line
+//   return totalPrice;
+// }
+
+// function fn(element) {
+//   if(user.friends.indexOf(friendName) !== -1) {
+//     return true;
+//   }
+
+//   return false;
+// }
+
+// const getUsersWithFriend = (users, friendName) => {
+//   //   const arrayOfFriends = users.flatMap(user => user.friends);
+//       users.filter(user => user.friends.indexOf(friendName) !== -1)
+//   };
+
+// const users = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male",
+//     age: 37,
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female",
+//     age: 34,
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male",
+//     age: 24,
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female",
+//     age: 21,
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male",
+//     age: 27,
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male",
+//     age: 38,
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female",
+//     age: 39,
+//   },
+// ];
+
+// const getFriends = (users) => {
+//   const arrayOfFriends = users.flatMap(({ friends }) => friends);
+//   return arrayOfFriends.filter(
+//     (user, index, array) => array.indexOf(user) === index
+//   );
+// };
+
+// console.log(getFriends(users));
+// // Change code below this line
+// const getFriends = (users) => {
+//   const arrayOfFriends = users.flatMap(({friends}) => friends);
+//   return arrayOfFriends.filter((user, index, array) => array.indexOf(user) === index)
+// };
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+// const playerValues = Object.values(players);
+// const totalAveragePlaytimePerGame = players.reduce(
+//   (total, player) => total + player.playtime / player.gamesPlayed
+// );
+
+// console.log(totalAveragePlaytimePerGame);
+
+// const users = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male",
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female",
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male",
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female",
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male",
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male",
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female",
+//   },
+// ];
+
+// const getTotalFriendCount = (users) =>
+//   users.reduce((total, user) => {
+//     const arrayFriends = users.flatMap((user) => user.friends);
+//     return total + arrayFriends;
+//   }, 0);
+
+// console.log(getTotalFriendCount(users));
+
+// const scores = [61, 19, 74, 7, 35, 92, 56];
+// const ascendingScores = [...scores].sort();
+
+// console.log(scores); // [61, 19, 74, 35, 92, 56]
+// console.log(ascendingScores); // [19, 35, 56, 61, 74, 92]
+
+// const users = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male",
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female",
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male",
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female",
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male",
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: [
+//       "Jacklyn Lucas",
+//       "Linda Chapman",
+//       "Adrian Cross",
+//       "Solomon Fokes",
+//     ],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male",
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female",
+//   },
+// ];
+
+// const getTotalBalanceByGender = (users, gender) =>
+//   [...users]
+//     .filter((element) => element.gender === gender)
+//     .reduce((total, user) => {
+//       return total + user.balance;
+//     }, 0);
+
+// const resultOfFilter = [...users].filter(
+//   (element) => element.gender === "male"
+// );
+// console.log(resultOfFilter);
+
+// console.dir(_);
+
+// const treeTwo = new Node(
+//   1,
+//   new Node(8, null, new Node(3, null, null)),
+//   new Node(4, null, new Node(5, null, new Node(7)))
+// );
+
+// function firstNonConsecutive(arr) {
+//   for (let i = 0; i < arr.length - 1; i += 1) {
+//     if (arr[i] === arr[i + 1] - 1) {
+//       continue;
+//     }
+
+//     return arr[i + 1];
+//   }
+// }
+
+// console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]));
+
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+
+//   getItems() {
+//     return this.items;
+//   }
+
+//   addItem(newItem) {
+//     this.items.push(newItem);
+//   }
+
+//   removeItem(itemToRemove) {
+//     const itemIndex = this.items.indexOf(itemToRemove);
+//     this.items.splice(itemIndex, 1);
+//   }
+// }
+
+// // Change code above this line
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+// class Car {
+//   // Change code below this line
+//   static Price = {
+//     MAX_PRICE: 50000,
+//   };
+
+//   #price;
+
+//   constructor({ price }) {
+//     this.#price = price;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     if (newPrice <= Car.Price.MAX_PRICE) {
+//       this.#price = newPrice;
+//     }
+
+//     return this.#price;
+//   }
+//   // Change code above this line
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// class Admin extends User {
+
+//   static AccessLevel = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   constructor({ email, accessLevel, blacklistedEmails = [] }) {
+//     super(email);
+//     this.accessLevel = accessLevel;
+//     this.blacklistedEmails = blacklistedEmails;
+//   }
+
+//   blacklistedEmails;
+
+//   blacklist(email) {
+//     this.blacklistedEmails.push(email);
+//   }
+
+//   isBlacklisted(email) {
+//     this.blacklistedEmails.find(blackEm => blackEm === email);
+// }
+
+//   // Change code above this line
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   accessLevel: Admin.AccessLevel.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.accessLevel); // "superuser"
+
+// mango.blacklist("poly@mail.com");
+// console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.isBlacklisted("mango@mail.com")); // false
+// console.log(mango.isBlacklisted("poly@mail.com")); // true
+
+// <--------------------------------      task      -------------------------------->
+
+// var calc = function (expression) {
+//   const braketsOpen = "(";
+//   const braketsClosed = ")";
+
+//   let sumBrakets = 0;
+//   let maxBrakets = 0;
+//   let startBraketsIndex = 0;
+//   let endBraketsIndex = 0;
+
+//   const plus = "+";
+//   const minus = "-";
+//   const multiply = "*";
+//   const division = "/";
+
+//   for (let i = 0; i < expression.length; i += 1) {
+//     if (expression[i] === braketsOpen) {
+//       sumBrakets += 1;
+//     } else if (expression[i] === braketsClosed) {
+//       sumBrakets -= 1;
+//     }
+
+//     if (sumBrakets > maxBrakets) {
+//       maxBrakets = sumBrakets;
+//       startBraketsIndex = i;
+//     }
+//     // else if() {}
+//   }
+
+//   for (
+//     let i = startBraketsIndex;
+//     i < expression.length - startBraketsIndex;
+//     i += 1
+//   ) {
+//     if (expression[i] === braketsClosed) {
+//       endBraketsIndex = i;
+//       break;
+//     }
+//   }
+
+//   const subExpression = expression.slice(
+//     startBraketsIndex + 1,
+//     endBraketsIndex
+//   );
+//   for (let i = 0; i < subExpression.length; i += 1) {
+//     if (
+//       subExpression[i] === multiply ||
+//       subExpression[i] === division ||
+//       subExpression[i] === minus ||
+//       subExpression[i] === plus
+//     ) {
+//       let rightNumber = 0;
+//       let leftNumber = 0;
+
+//       for (let y = i + 1; y <= subExpression.length - 1; y += 1) {
+//         if (!Number.isNaN(subExpression[y])) {
+//           rightNumber = Number.parseInt(subExpression.slice(i + 1, y + 1));
+//         }
+//       }
+
+//       for (let y = i - 1; y >= 0; y -= 1) {
+//         if (!Number.isNaN(subExpression[y])) {
+//           leftNumber = Number.parseInt(subExpression.slice(y, i));
+//         }
+//       }
+//     }
+//     // switch (subExpression[i]) {
+//     //   case multiply:
+
+//     //     break;
+
+//     //   case division:
+//     //     break;
+
+//     //   case plus:
+//     //     break;
+
+//     //   case minus:
+//     //     break;
+//     // }
+//   }
+
+//   return subExpression;
+// };
+
+// console.log(calc("(2/(2+3)*4)--6"));
+
+// (2/(2+3.33)*4)--6
+// 0123456789
+
+// <--------------------------------      task      -------------------------------->
+
+// function useCallback(callback) {
+//   callback(1);
+//   callback(2);
+//   callback(3);
+// }
+
+// function callback(sentence) {
+//   console.log(sentence);
+// }
+
+// useCallback(callback);
+
+// <--------------------------------      task      -------------------------------->
+
+// const removeExclamationMarks = (s) =>
+//   s
+//     .split("")
+//     .filter((symbol) => symbol !== "!")
+//     .join("");
+
+// console.log(removeExclamationMarks("Hello World!"));
+
+// <--------------------------------      task      -------------------------------->
+
+// const sumMix = (x) =>
+//   x.map((number) => Number(number)).reduce((sum, el) => (sum += el));
+
+// console.log(sumMix([9, 3, "7", "3"]));
+
+// <--------------------------------      task      -------------------------------->
+
+// const otherAngle = (a, b) => 180 - a - b;
+
+// console.log(otherAngle(30, 60)); // 90
+// console.log(otherAngle(60, 60)); // 60
+
+// <--------------------------------      task      -------------------------------->
+
+// const toJadenCase = (str) =>
+//   str
+//     .split(" ")
+//     .map((item) => item[0].toUpperCase() + item.slice(1))
+//     .join(" ");
+
+// console.log(
+//   toJadenCase(
+//     "Write a function called atLeastTwo that receives an array and a callback as its arguments"
+//   )
+// );
+
+// <--------------------------------      task      -------------------------------->
+
+// const atLeastTwo = (array, callback) => {
+//   console.log(callback(array).length > 2);
+// };
+
+// function isOdd(array) {
+//   return array.filter((el) => el % 2 === 0);
+// }
+
+// atLeastTwo([1, 2, 3, 4, 5], isOdd);
+// atLeastTwo([2, 4, 6], isOdd);
+// atLeastTwo([1, 2, 3, 4, 5], (t) => t > 3);
+
+// const input = [
+//   {
+//     name: "John",
+//     yearOfBirth: 1988,
+//     placeOfBirth: "New York",
+//   },
+//   {
+//     name: "Nancy",
+//     yearOfBirth: 1963,
+//     placeOfBirth: "New York",
+//   },
+//   {
+//     name: "John",
+//     yearOfBirth: 1980,
+//     placeOfBirth: "Toronto",
+//   },
+// ];
+
+// function groupBy(array, callback) {
+//   const obj = {};
+//   const names = array
+//     .map((el) => el.name)
+//     .filter((element, index, array) => array.indexOf(element) === index);
+
+//   for (let name of names) {
+//     obj[name] = [];
+//   }
+
+//   array.reduce((sum, firstElement) => {
+//     obj[firstElement.name].push(firstElement);
+//   }, {});
+
+//   return obj;
+// }
+
+// function isOdd(number) {}
+
+// console.log(obj);
+
+// const isOdd = (num) => {
+//   return num % 2 === 1;
+// };
+
+// const groupBy = (array, callback) =>
+//   array.reduce((accumulator, currentValue) => {
+//     const key = callback(currentValue);
+
+//     if (accumulator[key]) {
+//       accumulator[key].push(currentValue);
+//     } else {
+//       accumulator[key] = [currentValue];
+//     }
+
+//     return accumulator;
+//   }, {});
+
+// console.log(groupBy(input, (t) => t.name));
+// console.log(groupBy(input, (t) => isOdd(t.yearOfBirth)));
+
+// function accum(s) {
+//     //   return s
+//     //     .split("")
+//     //     .map((symbol, index) => {
+//     //       return symbol.toUpperCase() + symbol.repeat(index).toLowerCase();
+//     //     })
+//     //     .join("-");
+
+//     // let symUpper = "";
+//     // for (let i = 0; i < s.length; i += 1) {
+//     //   symUpper += s[i].toUpperCase();
+
+//     //   for (let y = 0; y < i; y += 1) {
+//     //       symUpper += s[i].toLowerCase()
+//     //   }
+//     //   symUpper += "-";
+//     // }
+//     // return symUpper;
+//   }
+
+//   console.log(accum("ZpglnRxqenU")); // "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu")
+
+// const accum = (s) =>
+//   s
+//     .split("")
+//     .map(
+//       (symbol, index) =>
+//         symbol.toUpperCase() + symbol.repeat(index).toLowerCase()
+//     )
+//     .join("-");
+
+// function solution(str, ending) {
+//   if (str.length < ending.length) {
+//     return false;
+//   }
+
+//   for (
+//     let i = str.length - 1, y = ending.length - 1;
+//     y >= 0 && i >= 0;
+//     i -= 1, y -= 1
+//   ) {
+//     if (str[i] !== ending[y]) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// const solution = (str, ending) => str.endsWith(ending);
+
+// console.log(solution("abcde", "cde")); // true
+// //   console.log(solution("abcde", "abc")); // false
+// console.log(solution("sumo", "omo")); // false
+// console.log(solution("ails", "fails")); // false

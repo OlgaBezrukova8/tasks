@@ -20,23 +20,23 @@
 4. 
  */
 
-function findCharacter(word) {
-  if (word.length % 2 === 0) {
-    // четные
-    const middle = word.length / 2;
-    const sumOfMiddleCharacter = word[1] + word[2];
-    return sumOfMiddleCharacter;
-  } else {
-    // нечетные
-  }
-  return "";
-}
-console.log("task 1"); // es
-console.log(findCharacter("test")); // es
-console.log(findCharacter("character")); // a
-console.log(findCharacter("B")); // B
-console.log(findCharacter("")); // error
-console.log(findCharacter("      ")); // error
+// function findCharacter(word) {
+//   if (word.length % 2 === 0) {
+//     // четные
+//     const middle = word.length / 2;
+//     const sumOfMiddleCharacter = word[1] + word[2];
+//     return sumOfMiddleCharacter;
+//   } else {
+//     // нечетные
+//   }
+//   return "";
+// }
+// console.log("task 1"); // es
+// console.log(findCharacter("test")); // es
+// console.log(findCharacter("character")); // a
+// console.log(findCharacter("B")); // B
+// console.log(findCharacter("")); // error
+// console.log(findCharacter("      ")); // error
 
 // const word = prompt("Enter word");
 // if (word === null || word.trim() === "") {
